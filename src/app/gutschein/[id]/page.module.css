@@ -1,0 +1,296 @@
+.page { padding: 2rem 0 4rem; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
+.main { min-width: 0; }
+
+/* Banners */
+.expiredBanner,
+.expiringSoonBanner {
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.expiredBanner { background: #fce4ec; color: #b71c1c; }
+.expiringSoonBanner { background: #fff8e1; color: #f57f17; }
+
+/* Coupon card */
+.couponCard {
+  background: #fff;
+  border: 2px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+}
+
+.couponTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.valueBig {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e63946;
+  line-height: 1;
+}
+
+.expired { color: #999; }
+
+.shopLink {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+}
+
+.shopLink:hover { border-color: #e63946; color: #e63946; }
+
+.shopLogoLg {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: contain;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+}
+
+.couponTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 0.6rem;
+}
+
+.couponDesc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Code area */
+.codeArea {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.codeLabel { font-size: 0.78rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+
+.codeBox {
+  background: #fff;
+  border: 2px dashed #e63946;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.codeValue {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #1a1a2e;
+}
+
+.codeHint { font-size: 0.8rem; color: #888; margin-bottom: 1rem; }
+
+.noCode {
+  font-size: 0.9rem;
+  color: #555;
+  background: #e8f5e9;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.shopBtn {
+  display: block;
+  text-align: center;
+  padding: 0.9rem 1.5rem;
+  background: #e63946;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.shopBtn:hover { background: #c1121f; }
+
+.disabledBtn { background: #bbb; pointer-events: none; }
+
+/* Info grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  background: #f8f8f8;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.infoLabel { font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 0.4px; }
+.infoValue { font-size: 0.9rem; font-weight: 600; color: #1a1a2e; margin-top: 0.15rem; }
+.statusActive { color: #2e7d32; }
+.statusExpired { color: #b71c1c; }
+
+/* Terms */
+.terms {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 1.25rem;
+}
+
+.terms h3 { font-size: 0.9rem; font-weight: 700; color: #333; margin-bottom: 0.5rem; }
+.terms p { font-size: 0.82rem; color: #666; line-height: 1.6; }
+
+/* More coupons */
+.moreCoupons { margin-top: 2.5rem; }
+
+.moreTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.moreGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.allCouponsLink {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e63946;
+  text-decoration: none;
+}
+
+.allCouponsLink:hover { text-decoration: underline; }
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sidebarCard {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.sidebarCard h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebarLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: contain;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 0.75rem;
+}
+
+.sidebarShopName { font-size: 1rem; font-weight: 700; color: #1a1a2e; display: block; margin-bottom: 0.35rem; }
+.sidebarShopDesc { font-size: 0.8rem; color: #666; margin-bottom: 0.75rem; line-height: 1.5; }
+
+.sidebarDetail {
+  font-size: 0.8rem;
+  color: #555;
+  padding: 0.35rem 0;
+  border-top: 1px solid #f5f5f5;
+}
+
+.sidebarRating {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.78rem;
+  color: #888;
+  margin: 0.5rem 0;
+}
+
+.sidebarLink {
+  display: block;
+  margin-top: 0.75rem;
+  text-align: center;
+  padding: 0.55rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e63946;
+  text-decoration: none;
+}
+
+.sidebarLink:hover { background: #fce4ec; }
+
+.tipsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: #555;
+}
+
+@media (max-width: 1024px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .moreGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .moreGrid { grid-template-columns: 1fr; }
+  .infoGrid { grid-template-columns: 1fr; }
+  .couponTop { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}

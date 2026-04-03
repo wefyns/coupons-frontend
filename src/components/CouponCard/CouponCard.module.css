@@ -1,0 +1,190 @@
+.card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.compact {
+  border-radius: 8px;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.6rem 0.75rem 0;
+  min-height: 22px;
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+}
+
+.badgeNew { background: #e3f2fd; color: #1565c0; }
+.badgePopular { background: #fff3e0; color: #e65100; }
+.badgeShipping { background: #e8f5e9; color: #2e7d32; }
+.badgeExpiring { background: #fce4ec; color: #b71c1c; }
+
+/* Card body */
+.cardBody {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+/* Value badge */
+.valueBadge {
+  align-self: flex-start;
+  font-size: 1.4rem;
+  font-weight: 800;
+  padding: 0.2rem 0.75rem;
+  border-radius: 8px;
+  line-height: 1.3;
+}
+
+.value_prozent { background: #fff3e0; color: #e65100; }
+.value_betrag { background: #e8f5e9; color: #2e7d32; }
+.value_gratis { background: #e3f2fd; color: #1565c0; }
+.value_deal { background: #fce4ec; color: #b71c1c; }
+
+/* Shop info */
+.shopInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shopLogo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  object-fit: contain;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  flex-shrink: 0;
+}
+
+.shopName {
+  font-size: 0.82rem;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.shopName:hover { color: #e63946; text-decoration: underline; }
+
+/* Title */
+.title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.3;
+}
+
+.title a { text-decoration: none; color: inherit; }
+.title a:hover { color: #e63946; }
+
+/* Description */
+.description {
+  font-size: 0.83rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Code section */
+.codeSection { display: flex; flex-direction: column; gap: 0.25rem; }
+
+.codeLabel { font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.codeBox {
+  display: flex;
+  align-items: stretch;
+  border: 2px dashed #e63946;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.codeBox:hover { background: #fff5f5; }
+
+.code {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-family: monospace;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #1a1a2e;
+  filter: blur(3px);
+  user-select: none;
+  background: #fafafa;
+}
+
+.codeBox:hover .code { filter: blur(0); }
+
+.codeCopyBtn {
+  padding: 0.5rem 0.75rem;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Deal button */
+.dealBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.dealBtn:hover { background: #c1121f; }
+
+/* Meta */
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.metaItem {
+  font-size: 0.72rem;
+  color: #888;
+}
+
+.metaItem:not(:last-child)::after {
+  content: "·";
+  margin-left: 0.4rem;
+}
+
+.verified { color: #2e7d32; font-weight: 600; }

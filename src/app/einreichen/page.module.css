@@ -1,0 +1,80 @@
+.page { padding: 2rem 0 5rem; }
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+  padding-top: 1rem;
+}
+
+.intro {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 640px;
+}
+
+.formCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.formGroup { display: flex; flex-direction: column; gap: 0.3rem; }
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.label { font-size: 0.82rem; font-weight: 600; color: #333; }
+
+.input,
+.textarea {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fafafa;
+}
+
+.input:focus,
+.textarea:focus { border-color: #e63946; background: #fff; }
+
+.textarea { resize: vertical; }
+
+.submitBtn {
+  align-self: flex-start;
+  padding: 0.85rem 2rem;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.submitBtn:hover { background: #c1121f; }
+
+@media (max-width: 600px) {
+  .formRow { grid-template-columns: 1fr; }
+  .title { font-size: 1.6rem; }
+}

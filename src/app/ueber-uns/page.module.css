@@ -1,0 +1,114 @@
+.page { padding: 2rem 0 5rem; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.heroText {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.statCard {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border-top: 3px solid #e63946;
+}
+
+.statNum { font-size: 1.8rem; font-weight: 900; color: #e63946; display: block; line-height: 1; }
+.statLabel { font-size: 0.85rem; color: #666; margin-top: 0.4rem; display: block; }
+
+.section { margin-top: 2.5rem; }
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  max-width: 800px;
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.valueCard {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.valueIcon { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+.valueName { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.4rem; }
+.valueDesc { font-size: 0.85rem; color: #666; line-height: 1.5; }
+
+.ctaSection {
+  background: linear-gradient(135deg, #e63946, #c1121f);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 3rem;
+}
+
+.ctaSection h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
+.ctaSection p { font-size: 1rem; opacity: 0.9; margin-bottom: 1.5rem; }
+
+.ctaBtn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: #fff;
+  color: #e63946;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.ctaBtn:hover { opacity: 0.9; }
+
+@media (max-width: 900px) { .statsRow { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+  .valueGrid { grid-template-columns: 1fr; }
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+  .title { font-size: 1.8rem; }
+}

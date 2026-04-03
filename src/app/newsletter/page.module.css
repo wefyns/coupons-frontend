@@ -1,0 +1,101 @@
+.page { padding: 2rem 0 5rem; }
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.heroIcon { font-size: 4rem; margin-bottom: 1rem; }
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 0.95rem;
+  max-width: 540px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.emailInput:focus { border-color: #e63946; }
+
+.submitBtn {
+  padding: 0.85rem 1.5rem;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.submitBtn:hover { background: #c1121f; }
+
+.disclaimer { font-size: 0.78rem; color: #999; margin-top: 0.75rem; }
+
+.benefits { margin-top: 4rem; }
+
+.benefitsTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.benefitCard {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.benefitIcon { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+.benefitName { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 0.4rem; }
+.benefitDesc { font-size: 0.85rem; color: #666; line-height: 1.5; }
+
+@media (max-width: 600px) {
+  .form { flex-direction: column; }
+  .benefitGrid { grid-template-columns: 1fr; }
+  .title { font-size: 1.6rem; }
+}

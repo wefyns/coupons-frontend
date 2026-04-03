@@ -1,0 +1,133 @@
+.card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: #e63946;
+}
+
+.compact {
+  padding: 0.85rem;
+  border-radius: 8px;
+}
+
+.logoWrapper {
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: contain;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+}
+
+.compact .logo {
+  width: 44px;
+  height: 44px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.compact .name { font-size: 0.88rem; }
+
+.description {
+  font-size: 0.83rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.count {
+  font-size: 0.78rem;
+  background: #fff3e0;
+  color: #e65100;
+  padding: 0.15rem 0.6rem;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.cashback {
+  font-size: 0.78rem;
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 0.15rem 0.6rem;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.shipping {
+  font-size: 0.78rem;
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 0.15rem 0.6rem;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.15rem;
+}
+
+.stars {
+  color: #f5a623;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+}
+
+.ratingValue {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.reviewCount {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  color: #ccc;
+  align-self: center;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.card:hover .arrow { color: #e63946; transform: translateX(3px); }

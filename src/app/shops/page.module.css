@@ -1,0 +1,63 @@
+.page { padding: 2rem 0 4rem; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  text-align: center;
+  padding: 2.5rem 0 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle { color: #555; font-size: 0.95rem; }
+
+.featuredRow { margin-bottom: 2.5rem; }
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1.25rem;
+}
+
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.section { margin-top: 2.5rem; }
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.seeAll {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e63946;
+  text-decoration: none;
+}
+
+.seeAll:hover { text-decoration: underline; }
+
+@media (max-width: 1024px) {
+  .shopGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .shopGrid { grid-template-columns: 1fr; }
+  .title { font-size: 1.5rem; }
+}
