@@ -3,6 +3,8 @@ import Link from "next/link";
 import CouponCard from "@/components/CouponCard/CouponCard";
 import ShopCard from "@/components/ShopCard/ShopCard";
 import CategoryGrid from "@/components/CategoryGrid/CategoryGrid";
+import CampaignGate from "@/components/CampaignGate/CampaignGate";
+import CasinoPromoBlock from "@/components/CasinoPromoBlock/CasinoPromoBlock";
 import {
   getFeaturedCoupons,
   getNewCoupons,
@@ -84,6 +86,14 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
+      <CampaignGate>
+        <section className={styles.casinoSection}>
+          <div className={styles.container}>
+            <CasinoPromoBlock />
+          </div>
+        </section>
+      </CampaignGate>
+
       <section className={styles.howItWorks}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Wie funktioniert es?</h2>

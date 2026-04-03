@@ -1,9 +1,41 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useRef } from "react";
 import { FOOTER_SECTIONS, CATEGORIES, SITE_STATS } from "@/data/index";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const emailInputRef = useRef<HTMLInputElement>(null);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const email = emailInputRef.current?.value;
+    if (!email) return;
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        alert("Vielen Dank! Sie haben sich erfolgreich für den Newsletter angemeldet.");
+        emailInputRef.current!.value = "";
+      } else {
+        alert("Fehler beim Anmelden. Bitte versuchen Sie es später erneut.");
+      }
+    } catch (error) {
+      console.error("Newsletter submit error:", error);
+      alert("Fehler beim Anmelden. Bitte versuchen Sie es später erneut.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <footer className={styles.footer}>
@@ -39,16 +71,17 @@ export default function Footer() {
               <h3>Kein Angebot mehr verpassen!</h3>
               <p>Abonnieren Sie unseren Newsletter und erhalten Sie täglich die besten Gutscheine.</p>
             </div>
-            <form action="/newsletter" method="post" className={styles.newsletterForm}>
+            <form className={styles.newsletterForm} onSubmit={handleNewsletterSubmit}>
               <input
                 type="email"
                 name="email"
                 placeholder="Ihre E-Mail-Adresse"
                 required
                 className={styles.newsletterInput}
+                ref={emailInputRef}
               />
-              <button type="submit" className={styles.newsletterBtn}>
-                Jetzt anmelden
+              <button type="submit" className={styles.newsletterBtn} disabled={isSubmitting}>
+                {isSubmitting ? "Wird gesendet..." : "Jetzt anmelden"}
               </button>
             </form>
           </div>
@@ -63,18 +96,12 @@ export default function Footer() {
             <div className={styles.brandColumn}>
               <Link href="/" className={styles.footerLogo}>
                 <div className={styles.footerLogoIcon}>DC</div>
-                <span>DeutschCoupons</span>
+                <span>DealCoupon</span>
               </Link>
               <p className={styles.brandDesc}>
                 Deutschlands führendes Gutschein-Portal. Jeden Tag neue Rabattcodes, Deals und Angebote von über{" "}
                 {SITE_STATS.totalShops} Top-Shops.
               </p>
-              <div className={styles.socialLinks}>
-                <a href="#" aria-label="Facebook" className={styles.socialLink}>f</a>
-                <a href="#" aria-label="Instagram" className={styles.socialLink}>in</a>
-                <a href="#" aria-label="Twitter" className={styles.socialLink}>tw</a>
-                <a href="#" aria-label="Pinterest" className={styles.socialLink}>pt</a>
-              </div>
             </div>
 
             {/* Link sections */}

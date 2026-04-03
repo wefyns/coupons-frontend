@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import CampaignDetector from "@/components/CampaignDetector/CampaignDetector";
 import "./globals.css";
 
 const inter = Inter({
@@ -86,6 +88,9 @@ export default function RootLayout({
     <html lang="de">
       <body className={inter.className}>
         <Header />
+        <Suspense fallback={null}>
+          <CampaignDetector />
+        </Suspense>
         <main>{children}</main>
         <Footer />
       </body>

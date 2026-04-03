@@ -4,8 +4,10 @@ import Link from "next/link";
 import CouponCard from "@/components/CouponCard/CouponCard";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import ShopCard from "@/components/ShopCard/ShopCard";
+import GamesCategoryGrid from "@/components/GamesCategoryGrid/GamesCategoryGrid";
 import {
   CATEGORIES,
+  CASINO_PROMOS,
   getShopsByCategory,
   getCouponsByCategory,
   getCategoryBySlug,
@@ -74,6 +76,31 @@ export default async function CategoryPage({ params }: Props) {
           </div>
         </div>
 
+        {/* Coupons in this category */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>
+            Alle {category.name} Gutscheine ({coupons.length})
+          </h2>
+          {coupons.length > 0 ? (
+            category.id === "games" ? (
+              <GamesCategoryGrid coupons={coupons} casinoPromos={CASINO_PROMOS} />
+            ) : (
+              <div className={styles.couponGrid}>
+                {coupons.map((coupon) => (
+                  <CouponCard key={coupon.id} coupon={coupon} />
+                ))}
+              </div>
+            )
+          ) : (
+            <div className={styles.empty}>
+              <p>Aktuell sind keine Gutscheine für diese Kategorie verfügbar.</p>
+              <Link href="/kategorien" className={styles.backBtn}>
+                Alle Kategorien ansehen
+              </Link>
+            </div>
+          )}
+        </section>
+
         {/* Shops in this category */}
         {shops.length > 0 && (
           <section className={styles.section}>
@@ -85,27 +112,6 @@ export default async function CategoryPage({ params }: Props) {
             </div>
           </section>
         )}
-
-        {/* Coupons in this category */}
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>
-            Alle {category.name} Gutscheine ({coupons.length})
-          </h2>
-          {coupons.length > 0 ? (
-            <div className={styles.couponGrid}>
-              {coupons.map((coupon) => (
-                <CouponCard key={coupon.id} coupon={coupon} />
-              ))}
-            </div>
-          ) : (
-            <div className={styles.empty}>
-              <p>Aktuell sind keine Gutscheine für diese Kategorie verfügbar.</p>
-              <Link href="/kategorien" className={styles.backBtn}>
-                Alle Kategorien ansehen
-              </Link>
-            </div>
-          )}
-        </section>
 
         {/* Other categories */}
         <section className={styles.section}>

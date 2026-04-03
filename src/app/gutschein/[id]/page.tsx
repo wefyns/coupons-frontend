@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import CouponCard from "@/components/CouponCard/CouponCard";
+import CampaignGate from "@/components/CampaignGate/CampaignGate";
+import CasinoPromoBlock from "@/components/CasinoPromoBlock/CasinoPromoBlock";
 import {
   COUPONS,
   getCouponById,
@@ -230,6 +232,10 @@ export default async function CouponPage({ params }: Props) {
                 <li>✅ Rabatt vor Bestätigung prüfen</li>
               </ul>
             </div>
+
+            <CampaignGate>
+              <CasinoPromoBlock limit={3} variant="sidebar" />
+            </CampaignGate>
           </aside>
         </div>
 
